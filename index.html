@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Teaching PHP</title>
+
+		<meta name="description" content="Teaching PHP, DundeePHP - February 2016">
+		<meta name="author" content="Thomas Dutrion">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/engineor.css" id="theme">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Teaching PHP</h1>
+					<h3>DundeePHP February 2016</h3>
+					<p>
+						<small>By <a href="https://onename.com/tdutrion">Thomas Dutrion</a> / <a href="https://twitter.com/tdutrion">@tdutrion</a> - 25/02/2016</small>
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>About me</h2>
+						<ul>
+								<li>Founder & Developer / web architect at <a href="https://www.engineor.com">Engineor</a></li>
+								<li>Working with PHP since 2003</li>
+								<li>Doing my best to work properly!</li>
+						</ul>
+						<div style="margin-top: 1.2em">
+							<img src="images/tdutrion.jpg" alt="Photo Thomas Dutrion" style="max-height:200px">
+							<img src="images/engineor.png" alt="Engineor Logo" style="max-height:200px">
+						</div>
+					</section>
+					<section>
+						<h2>About me</h2>
+						<div style="margin-top: 1.2em">
+							<img src="images/ENU-logo.png" alt="Edinburgh Napier University Logo">
+						</div>
+						<ul>
+							<li><strong>Part time lecturer at Edinburgh Napier University</strong></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Disclaimer</h2>
+						<ul>
+							<li class="fragment">Feedback and questions on my own experiences</li>
+							<li class="fragment"><strong>A personal learning experience</strong></li>
+							<li class="fragment">Not against Edinburgh Napier University (or any other university) teaching stategies</li>
+							<li class="fragment">Nothing personal against anyone, again just an attempt to move forward</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Your background</h2>
+						<ul>
+							<li class="fragment">Who considers himself or herself as self taught?</li>
+							<li class="fragment">Who has a computing science degree?<br>(even if you consider yourself as self-taught)</li>
+						</ul>
+					</section>
+					<section>
+						<h2>My educational background</h2>
+						<ul>
+							<li>DUT informatique (Université Pierre Mendès France - 2nd year)</li>
+							<li>BSc computing (Edinburgh Napier University - 3rd year)</li>
+							<li>MSCi computing (Edinburgh Napier University - 5th year)</li>
+						</ul>
+						<img src="images/graduation.jpg" alt="Picture of my MSCi graduation ceremony">
+					</section>
+					<section>
+						<h2>My French experience</h2>
+						<ul>
+							<li>Lots of mathematics</li>
+							<li>Lots of lectures / practicals hours (40 hours a week)</li>
+							<li>Very theoretical</li>
+							<li>Not even university, supposed to be practical learning...</li>
+						</ul>
+					</section>
+					<section>
+						<h2>My Scottish experience</h2>
+						<ul>
+							<li>Project based learning</li>
+							<li>Lectures and practicals only 12 hours a week</li>
+							<li>Plenty of time to learn on my own</li>
+							<li>Not much to learn in class, already knew most of it</li>
+						</ul>
+					</section>
+					<section>
+						<p style="font-size: 1.4em">Am I never satisfied?</p>
+						<p style="font-size: 1.2em">I'm French after all...</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>My current situation</h2>
+						<ul>
+							<li>Teaching an hour of lecture a week, a senior lecturer teaches the second hour</li>
+							<li>Module including HTML, CSS, Javascript/jQuery and PHP</li>
+							<li>More than 100 second year students with various backgrounds and knowledge</li>
+							<li>13 weeks of teaching</li>
+							<li>A PHP 5.6 server, students connecting with WinSCP and editing using something similar to Notepad.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>PHP topics (already covered)</h3>
+						<style>
+							table.topics td {
+								font-size: 0.7em;
+							}
+							table.topics td+td {
+								text-align: center;
+							}
+							table.topics td+td i.fa-thumbs-o-up {
+								color: green;
+							}
+							table.topics td+td i.fa-thumbs-o-down {
+								color: red;
+							}
+						</style>
+						<table class="topics">
+							<thead>
+								<tr>
+									<th>Subject</th>
+									<th>Students reactions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Introduction to PHP</td>
+									<td><i class="fa fa-thumbs-o-up"></i></td>
+								</tr>
+								<tr>
+									<td>Create a simple website (use PHP for templating)</td>
+									<td><i class="fa fa-thumbs-o-up"></i></td>
+								</tr>
+								<tr>
+									<td>Forms, cookies and sessions</td>
+									<td><i class="fa fa-thumbs-o-up"></i></td>
+								</tr>
+								<tr>
+									<td>PHP and databases (mysqli and PDO)</td>
+									<td>
+										<i class="fa fa-thumbs-o-up"></i>
+										<i class="fa fa-thumbs-o-down"></i>
+									</td>
+								</tr>
+								<tr>
+									<td>Database migrations (phinx) and professional practices (GIT, PSRs, jobs and certifications...)</td>
+									<td><i class="fa fa-thumbs-o-down"></i></td>
+								</tr>
+								<tr>
+									<td>CMS</td>
+									<td>
+										<i class="fa fa-thumbs-o-up"></i>
+										<i class="fa fa-thumbs-o-down"></i>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<h3>PHP topics (to come)</h3>
+						<table class="topics">
+							<thead>
+								<tr>
+									<th>Subject</th>
+									<th>Expected student reactions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Frameworks</td>
+									<td><i class="fa fa-thumbs-o-down"></i></td>
+								</tr>
+								<tr>
+									<td>Security</td>
+									<td>
+										<i class="fa fa-thumbs-o-up"></i>
+										<i class="fa fa-thumbs-o-down"></i>
+									</td>
+								</tr>
+								<tr>
+									<td>Code quality</td>
+									<td><i class="fa fa-thumbs-o-down"></i></td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<h2>Problems</h2>
+						<ul>
+							<li>Command line is considered as too complex</li>
+							<li>Willingness not to use to many external libraries/framework</li>
+							<li>Coursework only include fetching data from a database and linking pages</li>
+						</ul>
+						<p>Basically teaching PHP 3 using 5.6 components<br>(mysqli instead of mysql)!</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>What should we teach?</h2>
+						<table class="topics">
+							<thead>
+								<tr>
+									<th>Subject</th>
+									<th>Importance</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Basics</td>
+									<td>+++</td>
+								</tr>
+								<tr>
+									<td>Frameworks</td>
+									<td>+++</td>
+								</tr>
+								<tr>
+									<td>CMS</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>Command line interface and cron</td>
+									<td>+</td>
+								</tr>
+								<tr>
+									<td>Deployment and cloud</td>
+									<td>+</td>
+								</tr>
+								<tr>
+									<td>Security</td>
+									<td>+++</td>
+								</tr>
+								<tr>
+									<td>IDEs and advanced text editor</td>
+									<td>++</td>
+								</tr>
+								<tr>
+									<td>Versioning</td>
+									<td>+++</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<h3>Free resources</h3>
+						<p>(that we do not use)</p>
+						<ul>
+							<li>Conferences Youtube channel (<a href="https://www.youtube.com/user/phpukconference" target="_blank">PHPUK</a>, <a href="https://www.youtube.com/user/phpnwconference" target="_blank">PHPNW</a>...)</li>
+							<li>Sites (<a href="http://www.phptherightway.com/" target="_blank">PHP the Right Way</a>, <a href="http://phpsecurity.readthedocs.org/en/latest/">PHP Security</a>, <a href="https://getawesomeness.herokuapp.com/get/php" target="_blank">GetAwesomeness</a>...)</li>
+							<li>Podcasts (<a href="https://www.phproundtable.com/" target="_blank">PHP roundtable</a>, <a href="https://phptownhall.com/" target="_blank">PHP TownHall</a>...)</li>
+							<li><a href="http://www.phpschool.io/" target="_blank">PHPschool.io</a></li>
+							<li>User groups: how many lecturers do you know / have you met in UG?</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Professional certifications</h3>
+						<p>A good source to establish a good program?</p>
+						<p>Too advanced?</p>
+					</section>
+					<section>
+						<h3>Professional training</h3>
+						<p>Example: Zend training</p>
+						<style>
+							table.small {
+								font-size: 0.7em;
+							}
+						</style>
+						<table class="small">
+							<thead>
+								<tr>
+									<th>Title</th>
+									<th>Duration (hours)</th>
+									<th>Requirement</th>
+								<tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><a href="http://www.zend.com/en/services/training/php-i-foundations" target="_blank">PHP 1: foundations</a></td>
+									<td>20</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><a href="http://www.zend.com/en/services/training/php-ii-higher_structures" target="_blank">PHP 2: higher structures</a></td>
+									<td>22.5</td>
+									<td>Knowing the basics (PHP 1 or equivalent)</td>
+								</tr>
+								<tr>
+									<td><a href="http://www.zend.com/en/services/training/quick-start">PHP for Experienced (non PHP) OO/Procedural Programmers</a></td>
+									<td>16</td>
+									<td>Being a programmer in C, Java, C++, C#, JavaScript, Python, Perl, Ruby, VB.net for 2 years</td>
+								</tr>
+								<tr>
+									<td><a href="http://www.zend.com/en/services/training/security">Building Security into your PHP Applications</a></td>
+									<td>8</td>
+									<td>Basic to advanced knowledge of PHP 5 is recommended including experience developing PHP 5 applications.</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>A total of 52.5 hours to get from 0 to a supposedly good PHP developer.</p>
+					</section>
+					<section>
+						<table>
+							<caption>From <a href="http://www.modules.napier.ac.uk/Module.aspx?ID=set08101" target="_blank">Napier modules website</a></caption>
+							<thead>
+								<tr>
+									<th>Mode of activity
+									<th>Learning & Teaching Activity</th>
+									<th>NESH (Study Hours)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Face To Face</td>
+									<td>Lecture</td>
+									<td>24</td>
+								</tr>
+								<tr>
+									<td>Face To Face</td>
+									<td>Practical classes and workshops</td>
+									<td>24</td>
+								</tr>
+								<tr>
+									<td>Independent Learning</td>
+									<td>Guided independent study</td>
+									<td>152</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>Total Study Hours</td>
+									<td>200</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<h2>Moving forward</h2>
+						<ul>
+							<li>Should we focus on basics or teach current technologies?</li>
+							<li>Should we teach concepts instead of syntax?</li>
+							<li>How to update lecturers knowledge and skills, how to get them involved?</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h2>Thanks for having me (again)!</h2>
+					<p>Please continue the discussion here, on Slack (<a href="https://slack.scotlandphp.co.uk" target="_blank">slack.scotlandphp.co.uk</a>) or ping me on Twitter (<a href="https://twitter.com/tdutrion" target="_blank">@tdutrion</a>).</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: 'c/t',
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
